@@ -5,15 +5,18 @@ export const menuPageLoad = document.addEventListener(
 
     const menuItems = [
       {
-        title: "Dish1",
-        description: "Something tasty.",
+        title: "Udon Stir Fry",
+        description:
+          "A hearty stir fry made with a variety of seasonal fresh vegetables in Ketsup Manis Sauce with Udon and a choice of plant-based chicken or tofu.",
         imgURL:
-          "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg",
+          "https://christieathome.com/wp-content/uploads/2020/10/301DEA1C-A792-4A96-8E0F-54AD6B66BA27-scaled.jpg",
       },
       {
-        title: "Dish2",
-        description: "Something tasty also.",
-        imgURL: "https://ichef.bbci.co.uk/images/ic/480xn/p07ryyyj.jpg.webp",
+        title: "The Farmers Choice",
+        description:
+          "Creamy mashed potatoes with a plant-based, crispy coated Schnitzel, served with a red-wine mushroom gravy and a side salad.",
+        imgURL:
+          "https://inghams.com.au/wp-content/uploads/2023/06/0613_FS_Foodservice_Recipes_Website_Schnitzel_St3_V1.jpg",
       },
     ];
 
@@ -24,8 +27,13 @@ export const menuPageLoad = document.addEventListener(
     const headline = document.createElement("h2");
     headline.textContent = "Menu";
 
-    // Menu Item
+    // Menu Intro
 
+    const menuIntro = document.createElement("p");
+    menuIntro.textContent =
+      "The Good Old Kitchen's Menu varies every week and the dish of the day varies. We try our best to make our dishes seasonal but let's face it, sometimes you just gotta chuck a frozen pizza in the oven and call it a day. Below you will find a list of frequent dishes of the day.";
+
+    // Menu Item
     const createMenuItem = (title, description, imgURL) => {
       const menuItem = document.createElement("div");
       menuItem.classList.add("menuItem");
